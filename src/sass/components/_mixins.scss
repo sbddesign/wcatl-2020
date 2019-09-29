@@ -1,0 +1,30 @@
+@mixin button {
+  background: $link-color;
+  background: radial-gradient(circle at center, lighten($link-color, 5%) 0%, $link-color 100%);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  font-family: $font-display;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: $white;
+  display: block;
+  padding: $spacer;
+  text-align: center;
+  margin: auto;
+  border-radius: $spacer-half;
+
+  &:hover {
+    background: $link-hover;
+    text-decoration: none !important;
+  }
+
+  @media #{$lg_up} {
+    display: inline-flex;
+    padding: 1rem 2rem;
+  }
+}
+
+@mixin hidden {
+  position: absolute;
+  left:-999rem;
+}

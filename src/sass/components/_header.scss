@@ -1,0 +1,238 @@
+.custom-header {
+  background: $color-sky-light;
+  //background: linear-gradient(to top, $color-sky-dark, $color-sky-light 25%);
+  background: radial-gradient(circle at center, $color-sky-light 50%, $color-sky-dark 125%);
+  position: relative;
+  z-index:10;
+}
+
+.dropdown-toggle {
+  font-weight: bold;
+  z-index: 10;
+  border: 0;
+  cursor: pointer;
+  font-weight: 900;
+  //transform: rotate(180deg) scaleX(1.75);
+  color: $color-peach-solid;
+  padding: 1rem;
+  font-size: 1.5rem;
+  background: rgba(0,0,0,0);
+  flex-basis: 3rem;
+
+
+  &:before {
+    content: "^";
+    transform: rotate(180deg) scaleX(1.75);
+    transition: transform 0.25s;
+    display: inline-block;
+  }
+
+  &:hover {
+    background: $link-hover;
+    transition: background 0.25s;
+  }
+
+  &.toggled-on {
+
+
+    &:before {
+      transform: rotate(0deg) scaleX(1.75);
+      transition: transform 0.25s;
+    }
+  }
+}
+
+.menu-toggle {
+  display: block;
+  height: 1rem;
+  width: 100%;
+  background: $link-color;
+  color: $white;
+  padding: 1rem 1rem 2rem;
+  border:0;
+  letter-spacing: 0.5rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 5px 10px fade_out(#444, 0.75);
+
+  &[aria-expanded="true"] {
+    background: lighten($link-color, 10%);
+
+    &:hover {
+      background: lighten($link-color, 10%);
+    }
+  }
+
+  &:hover {
+    background: $link-hover;
+  }
+}
+
+#primary-menu {
+  list-style-type: none;
+  background: $link-color;
+  margin:0;
+  padding:0;
+  display: flex;
+  flex-direction: column;
+
+  //ul {
+  //  //  list-style-type: none;
+  //  //  margin: 0;
+  //  //  padding: 0;
+  //  //}
+
+  li {
+    position: relative;
+    z-index: 9;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .sub-menu {
+      //display: none;
+      z-index: 9;
+      position: relative;
+      transform: translateY(-100%);
+      height: 0;
+      background: darken($link-color, 5%);
+      opacity: 0;
+      width: 100%;
+      flex-basis: 100%;
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &.toggled-on {
+        transform: translateY(0%);
+        opacity: 1;
+        height: auto;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+      }
+
+      a {
+        padding-left: $spacer-2x !important;
+        font-weight: 400;
+      }
+    }
+  }
+
+  a {
+    color: $white;
+    padding: $spacer;
+    display: inline-block;
+    //width: 100%;
+    position: relative;
+    z-index: 10;
+    transition: background 0.25s;
+    flex-grow: 3;
+    font-size: 1.5rem;
+
+    text-transform: lowercase;
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+
+    &:hover {
+      background: $link-hover;
+      text-decoration: none;
+      transition: background 0.25s;
+    }
+  }
+
+
+
+
+}
+
+.site-branding {
+  margin:auto;
+  text-align: center;
+  padding: $spacer;
+}
+
+#site-navigation {
+  #primary-menu {
+    height:0;
+    overflow: hidden;
+    position: relative;
+    transform: translateY(-100%);
+    z-index: 9;
+    transition: transform 0.5s;
+  }
+
+  &.toggled-on {
+    #primary-menu {
+      height: auto;
+      transform: translateY(0%);
+      transition: transform 0.5s;
+    }
+  }
+}
+
+.site-title {
+  margin:0;
+  background-image: url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-logo-gradient-600.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: -999rem;
+  //border: 1px solid #f00;
+  background-position: center;
+  height: 6rem;
+}
+
+
+
+
+
+
+
+
+@media #{$lg_up} {
+  .dropdown-toggle {
+    //@include hidden;
+    //position: absolute;
+    //right:0;
+    //opacity:0;
+  }
+
+  .menu-item-has-children {
+    a {
+      &:after {
+
+      }
+    }
+  }
+
+  .menu-toggle {
+    @include hidden;
+  }
+
+  #primary-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+    li {
+      flex-grow: 1;
+      flex-basis: 0;
+      display: flex;
+    }
+
+    a {
+      display: block;
+      width: auto;
+      text-align: center;
+      position: unset;
+    }
+  }
+
+  #site-navigation {
+    #primary-menu {
+      height: auto;
+      transform: translateY(0);
+    }
+  }
+}

@@ -8,7 +8,49 @@ a {
 
   &:hover {
     color: $link-hover;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+}
+
+article {
+  &.post {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: $spacer-4x;
+    margin-bottom: $spacer-4x;
+
+    .entry-title {
+      font-size: 2.5rem;
+      line-height: 2.5rem;
+      font-family: $font-body;
+      font-weight: 900;
+    }
+
+    .entry-content {
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      h1,h2,h3,h4,h5,h6 {
+        //color: $color-bg-blue;
+      }
+    }
+
+    .entry-meta {
+      background: $color-gray-faint;
+      padding: $spacer;
+      font-style: italic;
+    }
+
+    .more-link {
+      @include button;
+    }
+
+    .wp-block-separator {
+      opacity: .15;
+      margin-bottom: $spacer;
+    }
   }
 }
 
@@ -20,15 +62,12 @@ body {
   margin: 0;
 }
 
-.custom-header {
-  background: $color-sky-light;
-  background: linear-gradient(to top, $color-sky-dark, $color-sky-light 100%);
-}
-
 h1,h2,h3,h4,h5,h6 {
   font-family: $font-display;
   font-weight: 400;
+  color: $color-bg-blue;
 }
+
 
 input,
 textarea,
@@ -37,67 +76,11 @@ button {
 	font: inherit;
 }
 
-#primary-menu {
-  ul {
-    list-style-type: none;
-    background: $link-color;
-    margin:0;
-    padding:0;
-    display: flex;
-    flex-direction: column;
-
-    a {
-      color: $white;
-      padding: $spacer;
-      display: inline-block;
-      width: 100%;
-
-      &:hover {
-        background: $link-hover;
-      }
-    }
-
-    .page_item_has_children {
-      a {
-        padding-left: $spacer-2x;
-      }
-    }
-  }
-}
-
-#masthead {
-  background: $color-sky-dark;
-}
-
-.menu-toggle {
-  display: block;
-  height: 1rem;
-  width: 100%;
-  background: $link-color;
-  color: $white;
-  padding: 1rem 1rem 2rem;
-  border:0;
-  letter-spacing: 0.5rem;
-  cursor: pointer;
-
-  &:before {
-    //display: block;
-    //background: $link-color;
-    content:'MENU';
-    //width: 100%;
-    //padding: $spacer;
-    //color:$white;
-  }
-
-  &:hover {
-    background: $link-hover;
-  }
-}
-
 #page {
   background: $white;
   margin: 0 auto;
   max-width: 1200px;
+  box-shadow: $shadow;
 }
 
 #primary {
@@ -109,19 +92,50 @@ button {
   left: -999rem;
 }
 
-.site-branding {
-  margin:auto;
-  text-align: center;
-  padding: $spacer;
+#secondary {
+  padding: $spacer-2x;
 }
 
-.site-title {
-  margin:0;
-  background-image: url('../svg/wcatl20-logo-gradient.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-indent: -999rem;
-  //border: 1px solid #f00;
-  background-position: center;
-  height: 6rem;
+.site-footer {
+  background: $color-gray-faint;
+  padding: $spacer-2x;
+
+  .site-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    //width: 50%;
+    margin: auto;
+
+    > * {
+      padding: $spacer;
+    }
+
+    span[role="separator"] {
+      border: 1px solid #666;
+      //height: 1rem;
+      padding: 0;
+      display: block;
+      width: 100%;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+}
+
+@media #{$lg_up} {
+  #content {
+    display: flex;
+  }
+
+  #primary {
+    flex-basis: 66.666%;
+  }
+
+  #secondary {
+    flex-basis: 33.333%;
+  }
 }

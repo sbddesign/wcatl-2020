@@ -6,18 +6,49 @@ $color-green-dark: #04381b;
 $color-bg-teal: #00c8b4;
 $color-tree-green: #008f70;
 $color-bg-blue: #0073aa;
+$color-gray-faint: #eee;
 
 $link-color: $color-tree-green;
-$link-hover: darken($link-color, 10%);
+$link-hover: lighten($link-color, 10%);
 
 $white: #fff;
+
 
 //Fonts
 $font-body: 'Roboto', sans-serif;
 $font-display: 'Indie Flower', sans-serif;
+
 
 //Spacers
 $spacer: 1rem;
 $spacer-half: 0.5rem;
 $spacer-2x: 2rem;
 $spacer-4x: 4rem;
+
+
+//Effects
+$shadow: 0 0 20px fade_out(#444, 0.5);
+
+
+//Breakpoint Sizes
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$sm: map_get($grid-breakpoints, sm);
+$md: map_get($grid-breakpoints, md);
+$lg: map_get($grid-breakpoints, lg);
+$xl: map_get($grid-breakpoints, xl);
+
+
+//Breakpoint Queries
+$sm_up: screen and (min-width: $sm);
+$md_up: screen and (min-width: $md);
+$lg_up: screen and (min-width: $lg);
+$xl_up: screen and (min-width: $xl);
+
+$lg_down: screen and (max-width: $lg - 1px);
