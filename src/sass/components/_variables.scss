@@ -1,0 +1,23 @@
+//Colors
+$color-sky-dark: #62d6f0;
+$color-sky-light: #ccfffc;
+$color-peach-solid: #f28047;
+$color-green-dark: #04381b;
+$color-bg-teal: #00c8b4;
+$color-tree-green: #008f70;
+$color-bg-blue: #0073aa;
+
+$link-color: $color-tree-green;
+$link-hover: darken($link-color, 10%);
+
+$white: #fff;
+
+//Fonts
+$font-body: 'Roboto', sans-serif;
+$font-display: 'Indie Flower', sans-serif;
+
+//Spacers
+$spacer: 1rem;
+$spacer-half: 0.5rem;
+$spacer-2x: 2rem;
+$spacer-4x: 4rem;
