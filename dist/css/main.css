@@ -416,12 +416,16 @@ button {
 }
 
 @media (min-width: 992px) {
-  /* line 208, src/sass/components/_header.scss */
+  /* line 193, src/sass/components/_header.scss */
+  .dropdown-toggle {
+    font-size: 1.25rem;
+  }
+  /* line 201, src/sass/components/_header.scss */
   .menu-toggle {
     position: absolute;
     left: -999rem;
   }
-  /* line 212, src/sass/components/_header.scss */
+  /* line 205, src/sass/components/_header.scss */
   #primary-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -433,26 +437,103 @@ button {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    overflow: visible !important;
+    -webkit-box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
+            box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
   }
-  /* line 218, src/sass/components/_header.scss */
+  /* line 212, src/sass/components/_header.scss */
   #primary-menu li {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1;
-    -ms-flex-preferred-size: 0;
-        flex-basis: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
-  /* line 224, src/sass/components/_header.scss */
+  /* line 218, src/sass/components/_header.scss */
+  #primary-menu li:hover {
+    background: #00c298;
+    -webkit-transition: background 0.25s;
+    transition: background 0.25s;
+  }
+  /* line 223, src/sass/components/_header.scss */
+  #primary-menu li .sub-menu {
+    position: absolute;
+    height: auto;
+    top: 100%;
+    -webkit-box-shadow: 0 0 10px rgba(68, 68, 68, 0.25);
+            box-shadow: 0 0 10px rgba(68, 68, 68, 0.25);
+    border-radius: 0 0 0.5rem 0.5rem;
+    overflow: hidden;
+  }
+  /* line 232, src/sass/components/_header.scss */
+  #primary-menu li .sub-menu a {
+    font-size: 1rem;
+    text-align: left;
+    padding: 1rem !important;
+  }
+  /* line 240, src/sass/components/_header.scss */
   #primary-menu a {
     display: block;
     width: auto;
     text-align: center;
     position: unset;
+    font-size: 1.25rem;
   }
-  /* line 233, src/sass/components/_header.scss */
+  /* line 253, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children:hover .dropdown-toggle:before {
+    -webkit-transform: rotate(0deg) scaleX(1.75);
+            transform: rotate(0deg) scaleX(1.75);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+  }
+  /* line 258, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children:hover .sub-menu {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+    opacity: 1;
+  }
+  /* line 268, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children.current-menu-item:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor:hover .dropdown-toggle:before {
+    -webkit-transform: rotate(0deg) scaleX(1.75) !important;
+            transform: rotate(0deg) scaleX(1.75) !important;
+  }
+  /* line 273, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children.current-menu-item:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor:hover .sub-menu {
+    -webkit-transform: translateY(0%) !important;
+            transform: translateY(0%) !important;
+    opacity: 1 !important;
+  }
+  /* line 280, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children.current-menu-item .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor .dropdown-toggle:before {
+    -webkit-transform: rotate(180deg) scaleX(1.75) !important;
+            transform: rotate(180deg) scaleX(1.75) !important;
+  }
+  /* line 285, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children.current-menu-item .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-page-parent .sub-menu, #primary-menu .menu-item-has-children.current_page_parent .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor .sub-menu {
+    -webkit-transform: translateY(-100%) !important;
+            transform: translateY(-100%) !important;
+    opacity: 0 !important;
+  }
+  /* line 292, src/sass/components/_header.scss */
+  #primary-menu .menu-item-has-children .sub-menu.toggled-on {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+    -webkit-transition: -webkit-transform 0.25s;
+    transition: -webkit-transform 0.25s;
+    transition: transform 0.25s;
+    transition: transform 0.25s, -webkit-transform 0.25s;
+    opacity: 1;
+  }
+  /* line 307, src/sass/components/_header.scss */
   #site-navigation #primary-menu {
     height: auto;
     -webkit-transform: translateY(0);
