@@ -13,10 +13,8 @@ a {
 }
 
 article {
-  &.post {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: $spacer-4x;
-    margin-bottom: $spacer-4x;
+  &.post, &.page {
+    @include article-style;
 
     .entry-title {
       font-size: 2.5rem;
@@ -57,9 +55,15 @@ article {
 body {
 	font-family: $font-body;
   font-weight: 300;
-  background: $color-bg-blue;
+  background-color: $color-bg-blue;
+  //background-color: radial-gradient(circle at center, $color-sky-light 50%, $color-sky-dark 125%);
   padding: 0;
   margin: 0;
+  background-image: url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png'), radial-gradient(circle at center, $color-sky-light 40%, $color-sky-dark 125%);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 150% auto;
+  background-attachment: fixed;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -68,6 +72,15 @@ h1,h2,h3,h4,h5,h6 {
   color: $color-bg-blue;
 }
 
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
 
 input,
 textarea,
@@ -77,10 +90,10 @@ button {
 }
 
 #page {
-  background: $white;
+  background: fade_out($white, 0.15);
   margin: 0 auto;
   max-width: 1200px;
-  box-shadow: $shadow;
+  box-shadow: 0 0 20px fade_out(darken($color-bg-blue, 20%), 0.75);
 }
 
 #primary {
@@ -94,36 +107,7 @@ button {
 
 #secondary {
   padding: $spacer-2x;
-}
-
-.site-footer {
-  background: $color-gray-faint;
-  padding: $spacer-2x;
-
-  .site-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    //width: 50%;
-    margin: auto;
-
-    > * {
-      padding: $spacer;
-    }
-
-    span[role="separator"] {
-      border: 1px solid #666;
-      //height: 1rem;
-      padding: 0;
-      display: block;
-      width: 100%;
-
-      &:last-child {
-        display: none;
-      }
-    }
-  }
+  background: $color-sky-light;
 }
 
 @media #{$lg_up} {
@@ -133,9 +117,20 @@ button {
 
   #primary {
     flex-basis: 66.666%;
+    padding: 3rem 8rem;
   }
 
   #secondary {
     flex-basis: 33.333%;
+  }
+}
+
+@media #{$xl_up} {
+  #page {
+    //max-width: 1200px;
+  }
+
+  #primary {
+
   }
 }

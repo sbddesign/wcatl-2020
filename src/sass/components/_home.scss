@@ -1,0 +1,65 @@
+@keyframes home-header {
+  from {
+    transform: scale(1) translateY(0%);
+    opacity:0;
+  }
+  50% {
+    opacity:1.0;
+  }
+  to {
+    transform: scale(1.5) translateY(0%);
+    opacity:0;
+  }
+}
+
+.home {
+  .custom-header {
+    height: 60vh;
+    background: radial-gradient(circle at center, $color-sky-light 50%, $color-sky-dark 125%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    animation: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .custom-header-media {
+    display: block;
+    background: url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl-hero-clouds@2x.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% auto;
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height:100%;
+    animation: home-header 15s linear infinite;
+    transform-origin: bottom;
+  }
+
+  .custom-logo {
+
+  }
+
+  .site-branding {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+@media #{$lg_up} {
+  .home {
+    .custom-logo {
+      height: 12rem;
+      margin-top: $spacer-4x;
+    }
+
+    .site-description {
+      font-size: 2.25rem;
+      width: 50%;
+      margin: 2rem auto;
+    }
+  }
+}

@@ -28,3 +28,9 @@
   position: absolute;
   left:-999rem;
 }
+
+@mixin article-style {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: $spacer-4x;
+  margin-bottom: $spacer-4x;
+}

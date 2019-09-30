@@ -1,0 +1,13 @@
+.wcorg-sponsors {
+
+  h2 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    font-family: $font-body;
+    font-weight: 900;
+  }
+
+  .wcorg-sponsor {
+    @include article-style;
+  }
+}

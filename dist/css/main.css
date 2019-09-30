@@ -22,34 +22,34 @@ a:hover {
 }
 
 /* line 16, src/sass/components/_base.scss */
-article.post {
+article.post, article.page {
   border-bottom: 1px solid #ccc;
   padding-bottom: 4rem;
   margin-bottom: 4rem;
 }
 
-/* line 21, src/sass/components/_base.scss */
-article.post .entry-title {
+/* line 19, src/sass/components/_base.scss */
+article.post .entry-title, article.page .entry-title {
   font-size: 2.5rem;
   line-height: 2.5rem;
   font-family: "Roboto", sans-serif;
   font-weight: 900;
 }
 
-/* line 30, src/sass/components/_base.scss */
-article.post .entry-content a:hover {
+/* line 28, src/sass/components/_base.scss */
+article.post .entry-content a:hover, article.page .entry-content a:hover {
   text-decoration: underline;
 }
 
-/* line 40, src/sass/components/_base.scss */
-article.post .entry-meta {
+/* line 38, src/sass/components/_base.scss */
+article.post .entry-meta, article.page .entry-meta {
   background: #eee;
   padding: 1rem;
   font-style: italic;
 }
 
-/* line 46, src/sass/components/_base.scss */
-article.post .more-link {
+/* line 44, src/sass/components/_base.scss */
+article.post .more-link, article.page .more-link {
   background: #008f70;
   background: radial-gradient(circle at center, #00a984 0%, #008f70 100%);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
@@ -66,14 +66,14 @@ article.post .more-link {
 }
 
 /* line 16, src/sass/components/_mixins.scss */
-article.post .more-link:hover {
+article.post .more-link:hover, article.page .more-link:hover {
   background: #00c298;
   text-decoration: none !important;
 }
 
 @media (min-width: 992px) {
-  /* line 46, src/sass/components/_base.scss */
-  article.post .more-link {
+  /* line 44, src/sass/components/_base.scss */
+  article.post .more-link, article.page .more-link {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
@@ -81,29 +81,46 @@ article.post .more-link:hover {
   }
 }
 
-/* line 50, src/sass/components/_base.scss */
-article.post .wp-block-separator {
+/* line 48, src/sass/components/_base.scss */
+article.post .wp-block-separator, article.page .wp-block-separator {
   opacity: .15;
   margin-bottom: 1rem;
 }
 
-/* line 57, src/sass/components/_base.scss */
+/* line 55, src/sass/components/_base.scss */
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
-  background: #0073aa;
+  background-color: #0073aa;
   padding: 0;
   margin: 0;
+  background-image: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png"), radial-gradient(circle at center, #ccfffc 40%, #62d6f0 125%);
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 150% auto;
+  background-attachment: fixed;
 }
 
-/* line 65, src/sass/components/_base.scss */
+/* line 69, src/sass/components/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Indie Flower", sans-serif;
   font-weight: 400;
   color: #0073aa;
 }
 
-/* line 72, src/sass/components/_base.scss */
+/* line 75, src/sass/components/_base.scss */
+h2 {
+  font-size: 2.5rem;
+  line-height: 3rem;
+}
+
+/* line 80, src/sass/components/_base.scss */
+h3 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+/* line 85, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -111,86 +128,46 @@ button {
   font: inherit;
 }
 
-/* line 79, src/sass/components/_base.scss */
+/* line 92, src/sass/components/_base.scss */
 #page {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.85);
   margin: 0 auto;
   max-width: 1200px;
-  -webkit-box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
-          box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
+  -webkit-box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
+          box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
 }
 
-/* line 86, src/sass/components/_base.scss */
+/* line 99, src/sass/components/_base.scss */
 #primary {
   padding: 2rem;
 }
 
-/* line 90, src/sass/components/_base.scss */
+/* line 103, src/sass/components/_base.scss */
 .screen-reader-text {
   position: absolute;
   left: -999rem;
 }
 
-/* line 95, src/sass/components/_base.scss */
+/* line 108, src/sass/components/_base.scss */
 #secondary {
   padding: 2rem;
-}
-
-/* line 99, src/sass/components/_base.scss */
-.site-footer {
-  background: #eee;
-  padding: 2rem;
-}
-
-/* line 103, src/sass/components/_base.scss */
-.site-footer .site-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  margin: auto;
-}
-
-/* line 111, src/sass/components/_base.scss */
-.site-footer .site-info > * {
-  padding: 1rem;
-}
-
-/* line 115, src/sass/components/_base.scss */
-.site-footer .site-info span[role="separator"] {
-  border: 1px solid #666;
-  padding: 0;
-  display: block;
-  width: 100%;
-}
-
-/* line 122, src/sass/components/_base.scss */
-.site-footer .site-info span[role="separator"]:last-child {
-  display: none;
+  background: #ccfffc;
 }
 
 @media (min-width: 992px) {
-  /* line 130, src/sass/components/_base.scss */
+  /* line 114, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 134, src/sass/components/_base.scss */
+  /* line 118, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
+    padding: 3rem 8rem;
   }
-  /* line 138, src/sass/components/_base.scss */
+  /* line 123, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
@@ -205,7 +182,24 @@ button {
   z-index: 10;
 }
 
-/* line 9, src/sass/components/_header.scss */
+/* line 8, src/sass/components/_header.scss */
+.custom-header-media {
+  display: none;
+}
+
+/* line 13, src/sass/components/_header.scss */
+.custom-logo-link img {
+  width: auto;
+  height: 8rem;
+}
+
+/* line 18, src/sass/components/_header.scss */
+.custom-logo-link + .site-title {
+  position: absolute;
+  left: -999rem;
+}
+
+/* line 23, src/sass/components/_header.scss */
 .dropdown-toggle {
   font-weight: bold;
   z-index: 10;
@@ -220,7 +214,7 @@ button {
       flex-basis: 3rem;
 }
 
-/* line 23, src/sass/components/_header.scss */
+/* line 37, src/sass/components/_header.scss */
 .dropdown-toggle:before {
   content: "^";
   -webkit-transform: rotate(180deg) scaleX(1.75);
@@ -232,14 +226,14 @@ button {
   display: inline-block;
 }
 
-/* line 30, src/sass/components/_header.scss */
+/* line 44, src/sass/components/_header.scss */
 .dropdown-toggle:hover {
   background: #00c298;
   -webkit-transition: background 0.25s;
   transition: background 0.25s;
 }
 
-/* line 38, src/sass/components/_header.scss */
+/* line 52, src/sass/components/_header.scss */
 .dropdown-toggle.toggled-on:before {
   -webkit-transform: rotate(0deg) scaleX(1.75);
           transform: rotate(0deg) scaleX(1.75);
@@ -249,7 +243,7 @@ button {
   transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
-/* line 45, src/sass/components/_header.scss */
+/* line 59, src/sass/components/_header.scss */
 .menu-toggle {
   display: block;
   height: 1rem;
@@ -267,22 +261,22 @@ button {
           box-shadow: 0 5px 10px rgba(68, 68, 68, 0.25);
 }
 
-/* line 60, src/sass/components/_header.scss */
+/* line 74, src/sass/components/_header.scss */
 .menu-toggle[aria-expanded="true"] {
   background: #00c298;
 }
 
-/* line 63, src/sass/components/_header.scss */
+/* line 77, src/sass/components/_header.scss */
 .menu-toggle[aria-expanded="true"]:hover {
   background: #00c298;
 }
 
-/* line 68, src/sass/components/_header.scss */
+/* line 82, src/sass/components/_header.scss */
 .menu-toggle:hover {
   background: #00c298;
 }
 
-/* line 73, src/sass/components/_header.scss */
+/* line 87, src/sass/components/_header.scss */
 #primary-menu {
   list-style-type: none;
   background: #008f70;
@@ -297,7 +291,7 @@ button {
           flex-direction: column;
 }
 
-/* line 87, src/sass/components/_header.scss */
+/* line 101, src/sass/components/_header.scss */
 #primary-menu li {
   position: relative;
   z-index: 9;
@@ -311,7 +305,7 @@ button {
           align-items: flex-start;
 }
 
-/* line 94, src/sass/components/_header.scss */
+/* line 108, src/sass/components/_header.scss */
 #primary-menu li .sub-menu {
   z-index: 9;
   position: relative;
@@ -328,7 +322,7 @@ button {
   list-style-type: none;
 }
 
-/* line 108, src/sass/components/_header.scss */
+/* line 122, src/sass/components/_header.scss */
 #primary-menu li .sub-menu.toggled-on {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -340,13 +334,13 @@ button {
   transition: transform 0.25s ease, opacity 0.25s ease, -webkit-transform 0.25s ease;
 }
 
-/* line 115, src/sass/components/_header.scss */
+/* line 129, src/sass/components/_header.scss */
 #primary-menu li .sub-menu a {
   padding-left: 2rem !important;
   font-weight: 400;
 }
 
-/* line 122, src/sass/components/_header.scss */
+/* line 136, src/sass/components/_header.scss */
 #primary-menu a {
   color: #fff;
   padding: 1rem;
@@ -364,7 +358,7 @@ button {
   font-weight: bold;
 }
 
-/* line 137, src/sass/components/_header.scss */
+/* line 151, src/sass/components/_header.scss */
 #primary-menu a:hover {
   background: #00c298;
   text-decoration: none;
@@ -372,14 +366,21 @@ button {
   transition: background 0.25s;
 }
 
-/* line 149, src/sass/components/_header.scss */
+/* line 163, src/sass/components/_header.scss */
 .site-branding {
   margin: auto;
   text-align: center;
   padding: 1rem;
 }
 
-/* line 156, src/sass/components/_header.scss */
+/* line 169, src/sass/components/_header.scss */
+.site-description {
+  font-family: "Indie Flower", sans-serif;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
+/* line 176, src/sass/components/_header.scss */
 #site-navigation #primary-menu {
   height: 0;
   overflow: hidden;
@@ -393,7 +394,7 @@ button {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-/* line 166, src/sass/components/_header.scss */
+/* line 186, src/sass/components/_header.scss */
 #site-navigation.toggled-on #primary-menu {
   height: auto;
   -webkit-transform: translateY(0%);
@@ -404,7 +405,7 @@ button {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-/* line 174, src/sass/components/_header.scss */
+/* line 194, src/sass/components/_header.scss */
 .site-title {
   margin: 0;
   background-image: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-logo-gradient-600.png");
@@ -416,16 +417,42 @@ button {
 }
 
 @media (min-width: 992px) {
-  /* line 193, src/sass/components/_header.scss */
+  @-webkit-keyframes header {
+    from {
+      background-position: -120% 140px, 180% 140px, -60%  -140px, center center;
+    }
+    to {
+      background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
+    }
+  }
+  @keyframes header {
+    from {
+      background-position: -120% 140px, 180% 140px, -60%  -140px, center center;
+    }
+    to {
+      background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
+    }
+  }
+  /* line 230, src/sass/components/_header.scss */
+  .custom-header {
+    background: #ccfffc;
+    background: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-01@2x.png"), url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-02@2x.png"), url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-04@2x.png"), radial-gradient(circle at center, #ccfffc 50%, #62d6f0 125%);
+    background-repeat: no-repeat;
+    background-size: auto 100%, auto 100%, auto 100%, auto;
+    background-position: 0% 140px, 100% 140px, 100% -140px, center center;
+    -webkit-animation: header 30s linear infinite;
+            animation: header 30s linear infinite;
+  }
+  /* line 251, src/sass/components/_header.scss */
   .dropdown-toggle {
     font-size: 1.25rem;
   }
-  /* line 201, src/sass/components/_header.scss */
+  /* line 259, src/sass/components/_header.scss */
   .menu-toggle {
     position: absolute;
     left: -999rem;
   }
-  /* line 205, src/sass/components/_header.scss */
+  /* line 263, src/sass/components/_header.scss */
   #primary-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -441,7 +468,7 @@ button {
     -webkit-box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
             box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
   }
-  /* line 212, src/sass/components/_header.scss */
+  /* line 270, src/sass/components/_header.scss */
   #primary-menu li {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -452,13 +479,13 @@ button {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  /* line 218, src/sass/components/_header.scss */
+  /* line 276, src/sass/components/_header.scss */
   #primary-menu li:hover {
     background: #00c298;
     -webkit-transition: background 0.25s;
     transition: background 0.25s;
   }
-  /* line 223, src/sass/components/_header.scss */
+  /* line 281, src/sass/components/_header.scss */
   #primary-menu li .sub-menu {
     position: absolute;
     height: auto;
@@ -468,13 +495,13 @@ button {
     border-radius: 0 0 0.5rem 0.5rem;
     overflow: hidden;
   }
-  /* line 232, src/sass/components/_header.scss */
+  /* line 290, src/sass/components/_header.scss */
   #primary-menu li .sub-menu a {
     font-size: 1rem;
     text-align: left;
     padding: 1rem !important;
   }
-  /* line 240, src/sass/components/_header.scss */
+  /* line 298, src/sass/components/_header.scss */
   #primary-menu a {
     display: block;
     width: auto;
@@ -482,7 +509,7 @@ button {
     position: unset;
     font-size: 1.25rem;
   }
-  /* line 253, src/sass/components/_header.scss */
+  /* line 311, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children:hover .dropdown-toggle:before {
     -webkit-transform: rotate(0deg) scaleX(1.75);
             transform: rotate(0deg) scaleX(1.75);
@@ -491,7 +518,7 @@ button {
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s;
   }
-  /* line 258, src/sass/components/_header.scss */
+  /* line 316, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children:hover .sub-menu {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -501,29 +528,29 @@ button {
     transition: transform 0.25s, -webkit-transform 0.25s;
     opacity: 1;
   }
-  /* line 268, src/sass/components/_header.scss */
+  /* line 326, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor:hover .dropdown-toggle:before {
     -webkit-transform: rotate(0deg) scaleX(1.75) !important;
             transform: rotate(0deg) scaleX(1.75) !important;
   }
-  /* line 273, src/sass/components/_header.scss */
+  /* line 331, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor:hover .sub-menu {
     -webkit-transform: translateY(0%) !important;
             transform: translateY(0%) !important;
     opacity: 1 !important;
   }
-  /* line 280, src/sass/components/_header.scss */
+  /* line 338, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor .dropdown-toggle:before {
     -webkit-transform: rotate(180deg) scaleX(1.75) !important;
             transform: rotate(180deg) scaleX(1.75) !important;
   }
-  /* line 285, src/sass/components/_header.scss */
+  /* line 343, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-page-parent .sub-menu, #primary-menu .menu-item-has-children.current_page_parent .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor .sub-menu {
     -webkit-transform: translateY(-100%) !important;
             transform: translateY(-100%) !important;
     opacity: 0 !important;
   }
-  /* line 292, src/sass/components/_header.scss */
+  /* line 350, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children .sub-menu.toggled-on {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -533,10 +560,217 @@ button {
     transition: transform 0.25s, -webkit-transform 0.25s;
     opacity: 1;
   }
-  /* line 307, src/sass/components/_header.scss */
+  /* line 365, src/sass/components/_header.scss */
   #site-navigation #primary-menu {
     height: auto;
     -webkit-transform: translateY(0);
             transform: translateY(0);
   }
+}
+
+/* line 1, src/sass/components/_footer.scss */
+.site-footer {
+  padding: 2rem;
+  -webkit-box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+  position: relative;
+  background: #008f70;
+}
+
+/* line 7, src/sass/components/_footer.scss */
+.site-footer a {
+  color: #fff;
+}
+
+/* line 10, src/sass/components/_footer.scss */
+.site-footer a:hover {
+  text-decoration: underline;
+}
+
+/* line 15, src/sass/components/_footer.scss */
+.site-footer .site-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+}
+
+/* line 23, src/sass/components/_footer.scss */
+.site-footer .site-info > * {
+  padding: 1rem;
+}
+
+/* line 27, src/sass/components/_footer.scss */
+.site-footer .site-info span[role="separator"] {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0;
+  display: block;
+  width: 100%;
+}
+
+/* line 34, src/sass/components/_footer.scss */
+.site-footer .site-info span[role="separator"]:last-child {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  /* line 43, src/sass/components/_footer.scss */
+  .site-footer .site-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 75%;
+  }
+  /* line 48, src/sass/components/_footer.scss */
+  .site-footer .site-info span[role="separator"] {
+    height: 2rem;
+    width: 0;
+  }
+}
+
+@-webkit-keyframes home-header {
+  from {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  to {
+    -webkit-transform: scale(1.5) translateY(0%);
+            transform: scale(1.5) translateY(0%);
+    opacity: 0;
+  }
+}
+
+@keyframes home-header {
+  from {
+    -webkit-transform: scale(1) translateY(0%);
+            transform: scale(1) translateY(0%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  to {
+    -webkit-transform: scale(1.5) translateY(0%);
+            transform: scale(1.5) translateY(0%);
+    opacity: 0;
+  }
+}
+
+/* line 16, src/sass/components/_home.scss */
+.home .custom-header {
+  height: 60vh;
+  background: radial-gradient(circle at center, #ccfffc 50%, #62d6f0 125%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-animation: none;
+          animation: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 27, src/sass/components/_home.scss */
+.home .custom-header-media {
+  display: block;
+  background: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl-hero-clouds@2x.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: home-header 15s linear infinite;
+          animation: home-header 15s linear infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+/* line 46, src/sass/components/_home.scss */
+.home .site-branding {
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 992px) {
+  /* line 54, src/sass/components/_home.scss */
+  .home .custom-logo {
+    height: 12rem;
+    margin-top: 4rem;
+  }
+  /* line 59, src/sass/components/_home.scss */
+  .home .site-description {
+    font-size: 2.25rem;
+    width: 50%;
+    margin: 2rem auto;
+  }
+}
+
+/* line 2, src/sass/components/_organizers.scss */
+.wcorg-organizers .wcorg-organizer {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* line 4, src/sass/components/_organizers.scss */
+.wcorg-organizers .wcorg-organizer h2 {
+  text-align: center;
+}
+
+/* line 9, src/sass/components/_organizers.scss */
+.wcorg-organizers .wcorg-organizer .wcorg-organizer-description .avatar {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 0 auto 2rem;
+  border-radius: 1rem;
+}
+
+@media (min-width: 768px) {
+  /* line 26, src/sass/components/_organizers.scss */
+  .wcorg-organizers .wcorg-organizer h2 {
+    text-align: left;
+  }
+  /* line 31, src/sass/components/_organizers.scss */
+  .wcorg-organizers .wcorg-organizer .wcorg-organizer-description .avatar {
+    width: 25%;
+    max-width: 100px;
+    float: left;
+    margin: 0 1rem 1rem 0;
+  }
+}
+
+/* line 3, src/sass/components/_sponsors.scss */
+.wcorg-sponsors h2 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 900;
+}
+
+/* line 10, src/sass/components/_sponsors.scss */
+.wcorg-sponsors .wcorg-sponsor {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4rem;
+  margin-bottom: 4rem;
 }

@@ -6,8 +6,9 @@
 var settings = {
 	clean: true,
 	scripts: false,
-	polyfills: true,
+	polyfills: false,
 	styles: true,
+  images: true,
 	svgs: false,
 	copy: false,
 	reload: true
@@ -30,6 +31,10 @@ var paths = {
 		input: 'src/sass/**/*.{scss,sass}',
 		output: 'dist/css/'
 	},
+  images: {
+    input: 'src/img/**/*',
+    output: 'dist/img/'
+  },
 	svgs: {
 		input: 'src/svg/*.svg',
 		output: 'dist/svg/'
@@ -91,6 +96,9 @@ var postcss = require('gulp-postcss');
 var prefix = require('autoprefixer');
 var minify = require('cssnano');
 
+//Images
+var imagemin = require('gulp-image');
+
 // SVGs
 var svgmin = require('gulp-svgmin');
 var base64 = require('gulp-base64');
@@ -106,16 +114,37 @@ var browserSync = require('browser-sync');
 // Remove pre-existing content from output folders
 var cleanDist = function (done) {
 
-	// Make sure this feature is activated before running
-	if (!settings.clean) return done();
+  // Make sure this feature is activated before running
+  if (!settings.clean) return done();
 
-	// Clean the dist folder
-	del.sync([
-		paths.output
-	]);
+  // Clean the dist folder
+  del.sync([
+    paths.scripts.output,
+    paths.styles.output,
+    paths.svgs.output,
+    'dist/*',
+    '!dist',
+    '!dist/img'
+  ]);
 
-	// Signal completion
-	return done();
+  // Signal completion
+  return done();
+
+};
+
+// Remove pre-existing content from image folders
+var cleanImages = function (done) {
+
+  // Make sure this feature is activated before running
+  if (!settings.clean) return done();
+
+  // Clean the dist folder
+  del.sync([
+    paths.images.output
+  ]);
+
+  // Signal completion
+  return done();
 
 };
 
@@ -247,6 +276,19 @@ var buildSVGs = function (done) {
 
 };
 
+// Optimize Images
+var buildImages = function (done) {
+
+  // Make sure this feature is activated before running
+  if (!settings.images) return done();
+
+  // Optimize SVG files
+  return src(paths.images.input)
+    .pipe(imagemin())
+    .pipe(dest(paths.images.output));
+
+};
+
 // Copy static files into output folder
 var copyFiles = function (done) {
 
@@ -287,8 +329,14 @@ var reloadBrowser = function (done) {
 
 // Watch for changes
 var watchSource = function (done) {
-	watch(paths.input, series(exports.default, reloadBrowser));
-	done();
+  watch(paths.input, series(exports.files, reloadBrowser));
+  done();
+};
+
+// Watch for image changes
+var watchImages = function (done) {
+  watch(paths.images.input, series(exports.images, reloadBrowser));
+  done();
 };
 
 
@@ -296,23 +344,41 @@ var watchSource = function (done) {
  * Export Tasks
  */
 
+// Build Files Task
+// gulp files
+exports.files = series(
+  cleanDist,
+  parallel(
+    buildScripts,
+    lintScripts,
+    buildStyles,
+    buildSVGs,
+    copyFiles
+  )
+);
+
+// Build Images Task
+// gulp images
+exports.images = series(
+  cleanImages,
+  buildImages
+);
+
 // Default task
 // gulp
 exports.default = series(
-	cleanDist,
-	parallel(
-		buildScripts,
-		lintScripts,
-		buildStyles,
-		buildSVGs,
-		copyFiles
-	)
+  exports.files,
+  exports.images
 );
 
 // Watch and reload
 // gulp watch
 exports.watch = series(
-	exports.default,
-	startServer,
-	watchSource
+  exports.files,
+  exports.images,
+  startServer,
+  parallel(
+    watchSource,
+    watchImages
+  )
 );

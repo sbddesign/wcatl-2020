@@ -1,9 +1,23 @@
 .custom-header {
   background: $color-sky-light;
-  //background: linear-gradient(to top, $color-sky-dark, $color-sky-light 25%);
   background: radial-gradient(circle at center, $color-sky-light 50%, $color-sky-dark 125%);
   position: relative;
   z-index:10;
+}
+
+.custom-header-media {
+  display: none;
+}
+
+.custom-logo-link {
+  img {
+    width: auto;
+    height:8rem;
+  }
+
+  + .site-title {
+    @include hidden;
+  }
 }
 
 .dropdown-toggle {
@@ -152,6 +166,12 @@
   padding: $spacer;
 }
 
+.site-description {
+  font-family: $font-display;
+  font-style: italic;
+  font-size: 1.25rem;
+}
+
 #site-navigation {
   #primary-menu {
     height:0;
@@ -190,6 +210,44 @@
 
 
 @media #{$lg_up} {
+  @keyframes header {
+    from {
+      background-position:
+        -120% 140px,
+        180% 140px,
+        -60%  -140px,
+        center center;
+    }
+    to {
+      background-position:
+        220% 140px,
+        -80% 140px,
+        160%  -140px,
+        center center;
+    }
+  }
+
+  .custom-header {
+    background: $color-sky-light;
+    background:
+      url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-01@2x.png'),
+      url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-02@2x.png'),
+      url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-04@2x.png'),
+      radial-gradient(circle at center, $color-sky-light 50%, $color-sky-dark 125%);
+    background-repeat: no-repeat;
+    background-size:
+      auto 100%,
+      auto 100%,
+      auto 100%,
+      auto;
+    background-position:
+      0% 140px,
+      100% 140px,
+      100% -140px,
+      center center;
+    animation: header 30s linear infinite;
+  }
+
   .dropdown-toggle {
     //@include hidden;
     //position: absolute;
