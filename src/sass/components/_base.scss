@@ -16,11 +16,16 @@ article {
   &.post, &.page {
     @include article-style;
 
+    .entry-image {
+      max-width: 100%;
+    }
+
     .entry-title {
       font-size: 2.5rem;
       line-height: 2.5rem;
       font-family: $font-body;
       font-weight: 900;
+      margin-top: 0;
     }
 
     .entry-content {
@@ -92,7 +97,7 @@ body {
   padding: 0;
   margin: 0;
   background-image:
-    url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png'),
+    url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg.png'),
     radial-gradient(circle at center, $color-sky-light 45%, $color-sky-dark 75%, $color-bg-blue 110%);
   background-repeat: no-repeat;
   background-position:
