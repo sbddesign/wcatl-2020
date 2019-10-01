@@ -162,12 +162,15 @@ article.post, article.page {
   margin-bottom: 4rem;
 }
 
-/* line 19, src/sass/components/_base.scss */
-article.post .entry-image, article.page .entry-image {
+/* line 20, src/sass/components/_base.scss */
+article.post .entry-image img, article.page .entry-image img {
   max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
 }
 
-/* line 23, src/sass/components/_base.scss */
+/* line 28, src/sass/components/_base.scss */
 article.post .entry-title, article.page .entry-title {
   font-size: 2.5rem;
   line-height: 2.5rem;
@@ -176,30 +179,30 @@ article.post .entry-title, article.page .entry-title {
   margin-top: 0;
 }
 
-/* line 33, src/sass/components/_base.scss */
+/* line 38, src/sass/components/_base.scss */
 article.post .entry-content a:hover, article.page .entry-content a:hover {
   text-decoration: underline;
 }
 
-/* line 48, src/sass/components/_base.scss */
+/* line 53, src/sass/components/_base.scss */
 article.post .entry-meta .byline, article.page .entry-meta .byline {
   position: absolute;
   left: -999rem;
 }
 
-/* line 52, src/sass/components/_base.scss */
+/* line 57, src/sass/components/_base.scss */
 article.post .entry-meta .posted-on, article.page .entry-meta .posted-on {
   text-indent: -999rem;
   display: block;
 }
 
-/* line 57, src/sass/components/_base.scss */
+/* line 62, src/sass/components/_base.scss */
 article.post .entry-meta .published, article.page .entry-meta .published {
   position: absolute;
   left: -999rem;
 }
 
-/* line 61, src/sass/components/_base.scss */
+/* line 66, src/sass/components/_base.scss */
 article.post .entry-meta .updated, article.page .entry-meta .updated {
   display: block;
   text-indent: 0rem;
@@ -208,19 +211,19 @@ article.post .entry-meta .updated, article.page .entry-meta .updated {
   font-style: italic;
 }
 
-/* line 69, src/sass/components/_base.scss */
+/* line 74, src/sass/components/_base.scss */
 article.post .entry-meta .updated:before, article.page .entry-meta .updated:before {
   content: 'Updated on';
   color: #000;
   cursor: default;
 }
 
-/* line 74, src/sass/components/_base.scss */
+/* line 79, src/sass/components/_base.scss */
 article.post .entry-meta .updated:before:hover, article.page .entry-meta .updated:before:hover {
   color: #000;
 }
 
-/* line 81, src/sass/components/_base.scss */
+/* line 86, src/sass/components/_base.scss */
 article.post .more-link, article.page .more-link {
   background: #008f70;
   background: radial-gradient(circle at center, #00a984 0%, #008f70 100%);
@@ -246,7 +249,7 @@ article.post .more-link:hover, article.page .more-link:hover {
 }
 
 @media (min-width: 992px) {
-  /* line 81, src/sass/components/_base.scss */
+  /* line 86, src/sass/components/_base.scss */
   article.post .more-link, article.page .more-link {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -255,13 +258,13 @@ article.post .more-link:hover, article.page .more-link:hover {
   }
 }
 
-/* line 85, src/sass/components/_base.scss */
+/* line 90, src/sass/components/_base.scss */
 article.post .wp-block-separator, article.page .wp-block-separator {
   opacity: .15;
   margin-bottom: 1rem;
 }
 
-/* line 92, src/sass/components/_base.scss */
+/* line 97, src/sass/components/_base.scss */
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -275,26 +278,26 @@ body {
   background-attachment: fixed, fixed;
 }
 
-/* line 114, src/sass/components/_base.scss */
+/* line 119, src/sass/components/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Indie Flower", sans-serif;
   font-weight: 400;
   color: #0073aa;
 }
 
-/* line 120, src/sass/components/_base.scss */
+/* line 125, src/sass/components/_base.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 3rem;
 }
 
-/* line 125, src/sass/components/_base.scss */
+/* line 130, src/sass/components/_base.scss */
 h3 {
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-/* line 130, src/sass/components/_base.scss */
+/* line 135, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -302,7 +305,7 @@ button {
   font: inherit;
 }
 
-/* line 137, src/sass/components/_base.scss */
+/* line 142, src/sass/components/_base.scss */
 #page {
   background: rgba(255, 255, 255, 0.85);
   margin: 0 auto;
@@ -311,37 +314,37 @@ button {
           box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
 }
 
-/* line 144, src/sass/components/_base.scss */
+/* line 149, src/sass/components/_base.scss */
 #primary {
   padding: 2rem;
 }
 
-/* line 148, src/sass/components/_base.scss */
+/* line 153, src/sass/components/_base.scss */
 .screen-reader-text {
   position: absolute;
   left: -999rem;
 }
 
-/* line 153, src/sass/components/_base.scss */
+/* line 158, src/sass/components/_base.scss */
 #secondary {
   padding: 2rem;
   background: #eee;
 }
 
 @media (min-width: 992px) {
-  /* line 159, src/sass/components/_base.scss */
+  /* line 164, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 163, src/sass/components/_base.scss */
+  /* line 168, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
     padding: 3rem 8rem;
   }
-  /* line 168, src/sass/components/_base.scss */
+  /* line 173, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
