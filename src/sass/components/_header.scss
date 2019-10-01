@@ -220,22 +220,7 @@
 
 
 @media #{$lg_up} {
-  @keyframes header {
-    from {
-      background-position:
-        -120% 140px,
-        180% 140px,
-        -60%  -140px,
-        center center;
-    }
-    to {
-      background-position:
-        220% 140px,
-        -80% 140px,
-        160%  -140px,
-        center center;
-    }
-  }
+
 
   .custom-header {
     background: $color-sky-light;

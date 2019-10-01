@@ -1,0 +1,66 @@
+@keyframes header {
+  from {
+    background-position:
+      -120% 140px,
+      180% 140px,
+      -60%  -140px,
+      center center;
+  }
+  to {
+    background-position:
+      220% 140px,
+      -80% 140px,
+      160%  -140px,
+      center center;
+  }
+}
+
+@keyframes home-header {
+  from {
+    transform: scale(1) translateY(0%);
+    opacity:0;
+  }
+  12.5% {
+    opacity:1.0;
+  }
+  80% {
+    opacity:1.0;
+  }
+  to {
+    transform: scale(1.5) translateY(0%);
+    opacity:0;
+  }
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scale(0);
+    opacity: (0);
+  }
+  TO {
+    transform: scale(1);
+    opacity: (1);
+  }
+}
+
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity:1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity:0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity:1;
+  }
+}
