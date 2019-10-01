@@ -286,13 +286,21 @@ textarea {
   height: 8rem;
 }
 
-/* line 18, src/sass/components/_header.scss */
-.custom-logo-link + .site-title {
+/* line 19, src/sass/components/_header.scss */
+.custom-logo-link + .site-title:before {
+  content: 'April 18 - 19, 2020';
+  font-size: 2.5rem;
+  font-family: "Indie Flower", sans-serif;
+  color: #0073aa;
+}
+
+/* line 26, src/sass/components/_header.scss */
+.custom-logo-link + .site-title a {
   position: absolute;
   left: -999rem;
 }
 
-/* line 23, src/sass/components/_header.scss */
+/* line 32, src/sass/components/_header.scss */
 .dropdown-toggle {
   font-weight: bold;
   z-index: 10;
@@ -307,7 +315,7 @@ textarea {
       flex-basis: 3rem;
 }
 
-/* line 37, src/sass/components/_header.scss */
+/* line 46, src/sass/components/_header.scss */
 .dropdown-toggle:before {
   content: "^";
   -webkit-transform: rotate(180deg) scaleX(1.75);
@@ -319,14 +327,14 @@ textarea {
   display: inline-block;
 }
 
-/* line 44, src/sass/components/_header.scss */
+/* line 53, src/sass/components/_header.scss */
 .dropdown-toggle:hover {
   background: #00c298;
   -webkit-transition: background 0.25s;
   transition: background 0.25s;
 }
 
-/* line 52, src/sass/components/_header.scss */
+/* line 61, src/sass/components/_header.scss */
 .dropdown-toggle.toggled-on:before {
   -webkit-transform: rotate(0deg) scaleX(1.75);
           transform: rotate(0deg) scaleX(1.75);
@@ -336,7 +344,7 @@ textarea {
   transition: transform 0.25s, -webkit-transform 0.25s;
 }
 
-/* line 59, src/sass/components/_header.scss */
+/* line 68, src/sass/components/_header.scss */
 .menu-toggle {
   display: block;
   height: 1rem;
@@ -354,22 +362,22 @@ textarea {
           box-shadow: 0 5px 10px rgba(68, 68, 68, 0.25);
 }
 
-/* line 74, src/sass/components/_header.scss */
+/* line 83, src/sass/components/_header.scss */
 .menu-toggle[aria-expanded="true"] {
   background: #00c298;
 }
 
-/* line 77, src/sass/components/_header.scss */
+/* line 86, src/sass/components/_header.scss */
 .menu-toggle[aria-expanded="true"]:hover {
   background: #00c298;
 }
 
-/* line 82, src/sass/components/_header.scss */
+/* line 91, src/sass/components/_header.scss */
 .menu-toggle:hover {
   background: #00c298;
 }
 
-/* line 87, src/sass/components/_header.scss */
+/* line 96, src/sass/components/_header.scss */
 #primary-menu {
   list-style-type: none;
   background: #008f70;
@@ -384,7 +392,7 @@ textarea {
           flex-direction: column;
 }
 
-/* line 101, src/sass/components/_header.scss */
+/* line 110, src/sass/components/_header.scss */
 #primary-menu li {
   position: relative;
   z-index: 9;
@@ -398,7 +406,7 @@ textarea {
           align-items: flex-start;
 }
 
-/* line 108, src/sass/components/_header.scss */
+/* line 117, src/sass/components/_header.scss */
 #primary-menu li .sub-menu {
   z-index: 9;
   position: relative;
@@ -415,7 +423,7 @@ textarea {
   list-style-type: none;
 }
 
-/* line 122, src/sass/components/_header.scss */
+/* line 131, src/sass/components/_header.scss */
 #primary-menu li .sub-menu.toggled-on {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
@@ -427,13 +435,13 @@ textarea {
   transition: transform 0.25s ease, opacity 0.25s ease, -webkit-transform 0.25s ease;
 }
 
-/* line 129, src/sass/components/_header.scss */
+/* line 138, src/sass/components/_header.scss */
 #primary-menu li .sub-menu a {
   padding-left: 2rem !important;
   font-weight: 400;
 }
 
-/* line 136, src/sass/components/_header.scss */
+/* line 145, src/sass/components/_header.scss */
 #primary-menu a {
   color: #fff;
   padding: 1rem;
@@ -451,7 +459,7 @@ textarea {
   font-weight: bold;
 }
 
-/* line 151, src/sass/components/_header.scss */
+/* line 160, src/sass/components/_header.scss */
 #primary-menu a:hover {
   background: #00c298;
   text-decoration: none;
@@ -459,21 +467,21 @@ textarea {
   transition: background 0.25s;
 }
 
-/* line 163, src/sass/components/_header.scss */
+/* line 172, src/sass/components/_header.scss */
 .site-branding {
   margin: auto;
   text-align: center;
   padding: 1rem;
 }
 
-/* line 169, src/sass/components/_header.scss */
+/* line 178, src/sass/components/_header.scss */
 .site-description {
   font-family: "Indie Flower", sans-serif;
   font-style: italic;
   font-size: 1.25rem;
 }
 
-/* line 176, src/sass/components/_header.scss */
+/* line 185, src/sass/components/_header.scss */
 #site-navigation #primary-menu {
   height: 0;
   overflow: hidden;
@@ -487,7 +495,7 @@ textarea {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-/* line 186, src/sass/components/_header.scss */
+/* line 195, src/sass/components/_header.scss */
 #site-navigation.toggled-on #primary-menu {
   height: auto;
   -webkit-transform: translateY(0%);
@@ -498,8 +506,8 @@ textarea {
   transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
-/* line 194, src/sass/components/_header.scss */
-.site-title {
+/* line 204, src/sass/components/_header.scss */
+.site-title a {
   margin: 0;
   background-image: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-logo-gradient-600.png");
   background-repeat: no-repeat;
@@ -526,7 +534,7 @@ textarea {
       background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
     }
   }
-  /* line 230, src/sass/components/_header.scss */
+  /* line 240, src/sass/components/_header.scss */
   .custom-header {
     background: #ccfffc;
     background: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-01@2x.png"), url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-02@2x.png"), url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-04@2x.png"), radial-gradient(circle at center, #ccfffc 50%, #62d6f0 125%);
@@ -536,16 +544,16 @@ textarea {
     -webkit-animation: header 30s linear infinite;
             animation: header 30s linear infinite;
   }
-  /* line 251, src/sass/components/_header.scss */
+  /* line 261, src/sass/components/_header.scss */
   .dropdown-toggle {
     font-size: 1.25rem;
   }
-  /* line 259, src/sass/components/_header.scss */
+  /* line 269, src/sass/components/_header.scss */
   .menu-toggle {
     position: absolute;
     left: -999rem;
   }
-  /* line 263, src/sass/components/_header.scss */
+  /* line 273, src/sass/components/_header.scss */
   #primary-menu {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -561,7 +569,7 @@ textarea {
     -webkit-box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
             box-shadow: 0 0 20px rgba(68, 68, 68, 0.5);
   }
-  /* line 270, src/sass/components/_header.scss */
+  /* line 280, src/sass/components/_header.scss */
   #primary-menu li {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -572,13 +580,13 @@ textarea {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  /* line 276, src/sass/components/_header.scss */
+  /* line 286, src/sass/components/_header.scss */
   #primary-menu li:hover {
     background: #00c298;
     -webkit-transition: background 0.25s;
     transition: background 0.25s;
   }
-  /* line 281, src/sass/components/_header.scss */
+  /* line 291, src/sass/components/_header.scss */
   #primary-menu li .sub-menu {
     position: absolute;
     height: auto;
@@ -588,13 +596,13 @@ textarea {
     border-radius: 0 0 0.5rem 0.5rem;
     overflow: hidden;
   }
-  /* line 290, src/sass/components/_header.scss */
+  /* line 300, src/sass/components/_header.scss */
   #primary-menu li .sub-menu a {
     font-size: 1rem;
     text-align: left;
     padding: 1rem !important;
   }
-  /* line 298, src/sass/components/_header.scss */
+  /* line 308, src/sass/components/_header.scss */
   #primary-menu a {
     display: block;
     width: auto;
@@ -602,7 +610,7 @@ textarea {
     position: unset;
     font-size: 1.25rem;
   }
-  /* line 311, src/sass/components/_header.scss */
+  /* line 321, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children:hover .dropdown-toggle:before {
     -webkit-transform: rotate(0deg) scaleX(1.75);
             transform: rotate(0deg) scaleX(1.75);
@@ -611,7 +619,7 @@ textarea {
     transition: transform 0.25s;
     transition: transform 0.25s, -webkit-transform 0.25s;
   }
-  /* line 316, src/sass/components/_header.scss */
+  /* line 326, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children:hover .sub-menu {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -621,29 +629,29 @@ textarea {
     transition: transform 0.25s, -webkit-transform 0.25s;
     opacity: 1;
   }
-  /* line 326, src/sass/components/_header.scss */
+  /* line 336, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor:hover .dropdown-toggle:before {
     -webkit-transform: rotate(0deg) scaleX(1.75) !important;
             transform: rotate(0deg) scaleX(1.75) !important;
   }
-  /* line 331, src/sass/components/_header.scss */
+  /* line 341, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor:hover .sub-menu {
     -webkit-transform: translateY(0%) !important;
             transform: translateY(0%) !important;
     opacity: 1 !important;
   }
-  /* line 338, src/sass/components/_header.scss */
+  /* line 348, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor .dropdown-toggle:before {
     -webkit-transform: rotate(180deg) scaleX(1.75) !important;
             transform: rotate(180deg) scaleX(1.75) !important;
   }
-  /* line 343, src/sass/components/_header.scss */
+  /* line 353, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-page-parent .sub-menu, #primary-menu .menu-item-has-children.current_page_parent .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor .sub-menu {
     -webkit-transform: translateY(-100%) !important;
             transform: translateY(-100%) !important;
     opacity: 0 !important;
   }
-  /* line 350, src/sass/components/_header.scss */
+  /* line 360, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children .sub-menu.toggled-on {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -653,7 +661,7 @@ textarea {
     transition: transform 0.25s, -webkit-transform 0.25s;
     opacity: 1;
   }
-  /* line 365, src/sass/components/_header.scss */
+  /* line 375, src/sass/components/_header.scss */
   #site-navigation #primary-menu {
     height: auto;
     -webkit-transform: translateY(0);

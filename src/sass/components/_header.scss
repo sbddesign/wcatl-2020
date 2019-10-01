@@ -16,7 +16,16 @@
   }
 
   + .site-title {
-    @include hidden;
+    &:before {
+      content: 'April 18 - 19, 2020';
+      font-size: 2.5rem;
+      font-family: $font-display;
+      color: $color-bg-blue;
+    }
+
+    a {
+      @include hidden;
+    }
   }
 }
 
@@ -192,14 +201,15 @@
 }
 
 .site-title {
-  margin:0;
-  background-image: url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-logo-gradient-600.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  text-indent: -999rem;
-  //border: 1px solid #f00;
-  background-position: center;
-  height: 6rem;
+  a {
+    margin:0;
+    background-image: url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-logo-gradient-600.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    text-indent: -999rem;
+    background-position: center;
+    height: 6rem;
+  }
 }
 
 
