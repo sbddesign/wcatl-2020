@@ -91,11 +91,19 @@ body {
   //background-color: radial-gradient(circle at center, $color-sky-light 50%, $color-sky-dark 125%);
   padding: 0;
   margin: 0;
-  background-image: url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png'), radial-gradient(circle at center, $color-sky-light 40%, $color-sky-dark 125%);
+  background-image:
+    url('https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png'),
+    radial-gradient(circle at center, $color-sky-light 45%, $color-sky-dark 75%, $color-bg-blue 110%);
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 150% auto;
-  background-attachment: fixed;
+  background-position:
+    center bottom,
+    center center;
+  background-size:
+    150% auto,
+    auto;
+  background-attachment:
+    fixed,
+    fixed;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -139,7 +147,7 @@ button {
 
 #secondary {
   padding: $spacer-2x;
-  background: $color-sky-light;
+  background: $color-gray-faint;
 }
 
 @media #{$lg_up} {
