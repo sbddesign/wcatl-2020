@@ -11,6 +11,8 @@
   padding: $spacer;
   text-align: center;
   margin: auto;
+  border: 0;
+  cursor: pointer;
   border-radius: $spacer-half;
 
   &:hover {

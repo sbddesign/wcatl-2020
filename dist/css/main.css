@@ -94,10 +94,12 @@ article.post .more-link, article.page .more-link {
   padding: 1rem;
   text-align: center;
   margin: auto;
+  border: 0;
+  cursor: pointer;
   border-radius: 0.5rem;
 }
 
-/* line 16, src/sass/components/_mixins.scss */
+/* line 18, src/sass/components/_mixins.scss */
 article.post .more-link:hover, article.page .more-link:hover {
   background: #00c298;
   text-decoration: none !important;
@@ -133,26 +135,85 @@ body {
   background-attachment: fixed;
 }
 
-/* line 101, src/sass/components/_base.scss */
+/* line 102, src/sass/components/_base.scss */
+form button[type="submit"], form input[type="submit"] {
+  background: #008f70;
+  background: radial-gradient(circle at center, #00a984 0%, #008f70 100%);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-family: "Indie Flower", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  color: #fff;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  margin: auto;
+  border: 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
+}
+
+/* line 18, src/sass/components/_mixins.scss */
+form button[type="submit"]:hover, form input[type="submit"]:hover {
+  background: #00c298;
+  text-decoration: none !important;
+}
+
+@media (min-width: 992px) {
+  /* line 102, src/sass/components/_base.scss */
+  form button[type="submit"], form input[type="submit"] {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 1rem 2rem;
+  }
+}
+
+/* line 105, src/sass/components/_base.scss */
+form input[type="search"], form input[type="text"] {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+}
+
+/* line 111, src/sass/components/_base.scss */
+form select {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+}
+
+/* line 117, src/sass/components/_base.scss */
+form textarea {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #eee;
+}
+
+/* line 125, src/sass/components/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Indie Flower", sans-serif;
   font-weight: 400;
   color: #0073aa;
 }
 
-/* line 107, src/sass/components/_base.scss */
+/* line 131, src/sass/components/_base.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 3rem;
 }
 
-/* line 112, src/sass/components/_base.scss */
+/* line 136, src/sass/components/_base.scss */
 h3 {
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-/* line 117, src/sass/components/_base.scss */
+/* line 141, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -160,7 +221,7 @@ button {
   font: inherit;
 }
 
-/* line 124, src/sass/components/_base.scss */
+/* line 148, src/sass/components/_base.scss */
 #page {
   background: rgba(255, 255, 255, 0.85);
   margin: 0 auto;
@@ -169,37 +230,37 @@ button {
           box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
 }
 
-/* line 131, src/sass/components/_base.scss */
+/* line 155, src/sass/components/_base.scss */
 #primary {
   padding: 2rem;
 }
 
-/* line 135, src/sass/components/_base.scss */
+/* line 159, src/sass/components/_base.scss */
 .screen-reader-text {
   position: absolute;
   left: -999rem;
 }
 
-/* line 140, src/sass/components/_base.scss */
+/* line 164, src/sass/components/_base.scss */
 #secondary {
   padding: 2rem;
   background: #ccfffc;
 }
 
 @media (min-width: 992px) {
-  /* line 146, src/sass/components/_base.scss */
+  /* line 170, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 150, src/sass/components/_base.scss */
+  /* line 174, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
     padding: 3rem 8rem;
   }
-  /* line 155, src/sass/components/_base.scss */
+  /* line 179, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
