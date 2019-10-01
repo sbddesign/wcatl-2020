@@ -1,0 +1,21 @@
+button[type="submit"], input[type="submit"] {
+  @include button;
+}
+input[type="search"], input[type="text"], input[type="email"] {
+  padding: $spacer;
+  border-radius: $spacer-half;
+  margin-bottom: $spacer;
+  border: 1px solid $color-gray-faint;
+}
+select {
+  padding: $spacer;
+  border-radius: $spacer-half;
+  margin-bottom: $spacer;
+  border: 1px solid $color-gray-faint;
+}
+textarea {
+  padding: $spacer;
+  border-radius: $spacer-half;
+  margin-bottom: $spacer;
+  border: 1px solid $color-gray-faint;
+}
