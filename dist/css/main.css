@@ -41,14 +41,46 @@ article.post .entry-content a:hover, article.page .entry-content a:hover {
   text-decoration: underline;
 }
 
-/* line 38, src/sass/components/_base.scss */
-article.post .entry-meta, article.page .entry-meta {
+/* line 43, src/sass/components/_base.scss */
+article.post .entry-meta .byline, article.page .entry-meta .byline {
+  position: absolute;
+  left: -999rem;
+}
+
+/* line 47, src/sass/components/_base.scss */
+article.post .entry-meta .posted-on, article.page .entry-meta .posted-on {
+  text-indent: -999rem;
+  display: block;
+}
+
+/* line 52, src/sass/components/_base.scss */
+article.post .entry-meta .published, article.page .entry-meta .published {
+  position: absolute;
+  left: -999rem;
+}
+
+/* line 56, src/sass/components/_base.scss */
+article.post .entry-meta .updated, article.page .entry-meta .updated {
+  display: block;
+  text-indent: 0rem;
   background: #eee;
   padding: 1rem;
   font-style: italic;
 }
 
-/* line 44, src/sass/components/_base.scss */
+/* line 64, src/sass/components/_base.scss */
+article.post .entry-meta .updated:before, article.page .entry-meta .updated:before {
+  content: 'Updated on';
+  color: #000;
+  cursor: default;
+}
+
+/* line 69, src/sass/components/_base.scss */
+article.post .entry-meta .updated:before:hover, article.page .entry-meta .updated:before:hover {
+  color: #000;
+}
+
+/* line 76, src/sass/components/_base.scss */
 article.post .more-link, article.page .more-link {
   background: #008f70;
   background: radial-gradient(circle at center, #00a984 0%, #008f70 100%);
@@ -72,7 +104,7 @@ article.post .more-link:hover, article.page .more-link:hover {
 }
 
 @media (min-width: 992px) {
-  /* line 44, src/sass/components/_base.scss */
+  /* line 76, src/sass/components/_base.scss */
   article.post .more-link, article.page .more-link {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
@@ -81,13 +113,13 @@ article.post .more-link:hover, article.page .more-link:hover {
   }
 }
 
-/* line 48, src/sass/components/_base.scss */
+/* line 80, src/sass/components/_base.scss */
 article.post .wp-block-separator, article.page .wp-block-separator {
   opacity: .15;
   margin-bottom: 1rem;
 }
 
-/* line 55, src/sass/components/_base.scss */
+/* line 87, src/sass/components/_base.scss */
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -101,26 +133,26 @@ body {
   background-attachment: fixed;
 }
 
-/* line 69, src/sass/components/_base.scss */
+/* line 101, src/sass/components/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Indie Flower", sans-serif;
   font-weight: 400;
   color: #0073aa;
 }
 
-/* line 75, src/sass/components/_base.scss */
+/* line 107, src/sass/components/_base.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 3rem;
 }
 
-/* line 80, src/sass/components/_base.scss */
+/* line 112, src/sass/components/_base.scss */
 h3 {
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-/* line 85, src/sass/components/_base.scss */
+/* line 117, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -128,7 +160,7 @@ button {
   font: inherit;
 }
 
-/* line 92, src/sass/components/_base.scss */
+/* line 124, src/sass/components/_base.scss */
 #page {
   background: rgba(255, 255, 255, 0.85);
   margin: 0 auto;
@@ -137,37 +169,37 @@ button {
           box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
 }
 
-/* line 99, src/sass/components/_base.scss */
+/* line 131, src/sass/components/_base.scss */
 #primary {
   padding: 2rem;
 }
 
-/* line 103, src/sass/components/_base.scss */
+/* line 135, src/sass/components/_base.scss */
 .screen-reader-text {
   position: absolute;
   left: -999rem;
 }
 
-/* line 108, src/sass/components/_base.scss */
+/* line 140, src/sass/components/_base.scss */
 #secondary {
   padding: 2rem;
   background: #ccfffc;
 }
 
 @media (min-width: 992px) {
-  /* line 114, src/sass/components/_base.scss */
+  /* line 146, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 118, src/sass/components/_base.scss */
+  /* line 150, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
     padding: 3rem 8rem;
   }
-  /* line 123, src/sass/components/_base.scss */
+  /* line 155, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;

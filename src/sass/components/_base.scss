@@ -36,9 +36,41 @@ article {
     }
 
     .entry-meta {
-      background: $color-gray-faint;
-      padding: $spacer;
-      font-style: italic;
+      //background: $color-gray-faint;
+      //padding: 0 $spacer $spacer;
+      //font-style: italic;
+
+      .byline {
+        @include hidden;
+      }
+
+      .posted-on {
+        text-indent: -999rem;
+        display: block;
+      }
+
+      .published {
+        @include hidden;
+      }
+
+      .updated {
+        display: block;
+        text-indent: 0rem;
+
+        background: $color-gray-faint;
+        padding: $spacer;
+        font-style: italic;
+
+        &:before {
+          content: 'Updated on';
+          color: #000;
+          cursor: default;
+
+          &:hover {
+            color: #000;
+          }
+        }
+      }
     }
 
     .more-link {
