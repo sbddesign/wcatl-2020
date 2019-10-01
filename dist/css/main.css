@@ -128,33 +128,33 @@ body {
   background-color: #0073aa;
   padding: 0;
   margin: 0;
-  background-image: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png"), radial-gradient(circle at center, #ccfffc 40%, #62d6f0 125%);
+  background-image: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg@2x.png"), radial-gradient(circle at center, #ccfffc 45%, #62d6f0 75%, #0073aa 110%);
   background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 150% auto;
-  background-attachment: fixed;
+  background-position: center bottom, center center;
+  background-size: 150% auto, auto;
+  background-attachment: fixed, fixed;
 }
 
-/* line 101, src/sass/components/_base.scss */
+/* line 109, src/sass/components/_base.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Indie Flower", sans-serif;
   font-weight: 400;
   color: #0073aa;
 }
 
-/* line 107, src/sass/components/_base.scss */
+/* line 115, src/sass/components/_base.scss */
 h2 {
   font-size: 2.5rem;
   line-height: 3rem;
 }
 
-/* line 112, src/sass/components/_base.scss */
+/* line 120, src/sass/components/_base.scss */
 h3 {
   font-size: 2rem;
   line-height: 2.5rem;
 }
 
-/* line 117, src/sass/components/_base.scss */
+/* line 125, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -162,7 +162,7 @@ button {
   font: inherit;
 }
 
-/* line 124, src/sass/components/_base.scss */
+/* line 132, src/sass/components/_base.scss */
 #page {
   background: rgba(255, 255, 255, 0.85);
   margin: 0 auto;
@@ -171,37 +171,37 @@ button {
           box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
 }
 
-/* line 131, src/sass/components/_base.scss */
+/* line 139, src/sass/components/_base.scss */
 #primary {
   padding: 2rem;
 }
 
-/* line 135, src/sass/components/_base.scss */
+/* line 143, src/sass/components/_base.scss */
 .screen-reader-text {
   position: absolute;
   left: -999rem;
 }
 
-/* line 140, src/sass/components/_base.scss */
+/* line 148, src/sass/components/_base.scss */
 #secondary {
   padding: 2rem;
-  background: #ccfffc;
+  background: #eee;
 }
 
 @media (min-width: 992px) {
-  /* line 146, src/sass/components/_base.scss */
+  /* line 154, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 150, src/sass/components/_base.scss */
+  /* line 158, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
     padding: 3rem 8rem;
   }
-  /* line 155, src/sass/components/_base.scss */
+  /* line 163, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
