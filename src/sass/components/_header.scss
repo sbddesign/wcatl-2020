@@ -315,7 +315,13 @@
         }
       }
 
-      &.current-menu-item, &.current-menu-ancestor, &.current-menu-parent, &.current-page-ancestor, &.current-page-parent, &.current_page_parent, &.current_page_ancestor {
+      &.current-menu-item,
+      &.current-menu-ancestor,
+      &.current-menu-parent,
+      &.current-page-ancestor,
+      &.current-page-parent,
+      &.current_page_parent,
+      &.current_page_ancestor {
         &:hover {
           .dropdown-toggle {
             &:before {
@@ -337,7 +343,6 @@
         }
         .sub-menu {
           transform: translateY(-100%) !important;
-          //transition: transform 0.25s;
           opacity: 0 !important;
         }
       }

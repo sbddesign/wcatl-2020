@@ -160,6 +160,10 @@ button {
   background: $color-gray-faint;
 }
 
+strong, b {
+  font-weight: 700;
+}
+
 @media #{$lg_up} {
   #content {
     display: flex;

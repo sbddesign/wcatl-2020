@@ -331,20 +331,25 @@ button {
   background: #eee;
 }
 
+/* line 163, src/sass/components/_base.scss */
+strong, b {
+  font-weight: 700;
+}
+
 @media (min-width: 992px) {
-  /* line 164, src/sass/components/_base.scss */
+  /* line 168, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 168, src/sass/components/_base.scss */
+  /* line 172, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
     padding: 3rem 8rem;
   }
-  /* line 173, src/sass/components/_base.scss */
+  /* line 177, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
@@ -756,29 +761,29 @@ textarea {
     transition: transform 0.25s, -webkit-transform 0.25s;
     opacity: 1;
   }
-  /* line 321, src/sass/components/_header.scss */
+  /* line 327, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent:hover .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor:hover .dropdown-toggle:before {
     -webkit-transform: rotate(0deg) scaleX(1.75) !important;
             transform: rotate(0deg) scaleX(1.75) !important;
   }
-  /* line 326, src/sass/components/_header.scss */
+  /* line 332, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor:hover .sub-menu, #primary-menu .menu-item-has-children.current-page-parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_parent:hover .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor:hover .sub-menu {
     -webkit-transform: translateY(0%) !important;
             transform: translateY(0%) !important;
     opacity: 1 !important;
   }
-  /* line 333, src/sass/components/_header.scss */
+  /* line 339, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-menu-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-ancestor .dropdown-toggle:before, #primary-menu .menu-item-has-children.current-page-parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_parent .dropdown-toggle:before, #primary-menu .menu-item-has-children.current_page_ancestor .dropdown-toggle:before {
     -webkit-transform: rotate(180deg) scaleX(1.75) !important;
             transform: rotate(180deg) scaleX(1.75) !important;
   }
-  /* line 338, src/sass/components/_header.scss */
+  /* line 344, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children.current-menu-item .sub-menu, #primary-menu .menu-item-has-children.current-menu-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-menu-parent .sub-menu, #primary-menu .menu-item-has-children.current-page-ancestor .sub-menu, #primary-menu .menu-item-has-children.current-page-parent .sub-menu, #primary-menu .menu-item-has-children.current_page_parent .sub-menu, #primary-menu .menu-item-has-children.current_page_ancestor .sub-menu {
     -webkit-transform: translateY(-100%) !important;
             transform: translateY(-100%) !important;
     opacity: 0 !important;
   }
-  /* line 345, src/sass/components/_header.scss */
+  /* line 350, src/sass/components/_header.scss */
   #primary-menu .menu-item-has-children .sub-menu.toggled-on {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
@@ -788,7 +793,7 @@ textarea {
     transition: transform 0.25s, -webkit-transform 0.25s;
     opacity: 1;
   }
-  /* line 360, src/sass/components/_header.scss */
+  /* line 365, src/sass/components/_header.scss */
   #site-navigation #primary-menu {
     height: auto;
     -webkit-transform: translateY(0);
