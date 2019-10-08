@@ -8,19 +8,19 @@
 
 @-webkit-keyframes header {
   from {
-    background-position: -120% 140px, 180% 140px, -60%  -140px, center center;
+    background-position: -120% 140px, 180% 140px, -60%  -140px, center center;
   }
   to {
-    background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
+    background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
   }
 }
 
 @keyframes header {
   from {
-    background-position: -120% 140px, 180% 140px, -60%  -140px, center center;
+    background-position: -120% 140px, 180% 140px, -60%  -140px, center center;
   }
   to {
-    background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
+    background-position: 220% 140px, -80% 140px, 160%  -140px, center center;
   }
 }
 
@@ -273,9 +273,9 @@ body {
   margin: 0;
   background-image: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-atlanta-skyline-bg.png"), radial-gradient(circle at center, #ccfffc 45%, #62d6f0 75%, #0073aa 110%);
   background-repeat: no-repeat;
-  background-position: center bottom, center center;
-  background-size: 150% auto, auto;
-  background-attachment: fixed, fixed;
+  background-position: center bottom, center center;
+  background-size: 150% auto, auto;
+  background-attachment: fixed, fixed;
 }
 
 /* line 119, src/sass/components/_base.scss */
@@ -298,6 +298,12 @@ h3 {
 }
 
 /* line 135, src/sass/components/_base.scss */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* line 140, src/sass/components/_base.scss */
 input,
 textarea,
 select,
@@ -305,7 +311,7 @@ button {
   font: inherit;
 }
 
-/* line 142, src/sass/components/_base.scss */
+/* line 147, src/sass/components/_base.scss */
 #page {
   background: rgba(255, 255, 255, 0.85);
   margin: 0 auto;
@@ -314,42 +320,42 @@ button {
           box-shadow: 0 0 20px rgba(0, 46, 68, 0.25);
 }
 
-/* line 149, src/sass/components/_base.scss */
+/* line 154, src/sass/components/_base.scss */
 #primary {
   padding: 2rem;
 }
 
-/* line 153, src/sass/components/_base.scss */
+/* line 158, src/sass/components/_base.scss */
 .screen-reader-text {
   position: absolute;
   left: -999rem;
 }
 
-/* line 158, src/sass/components/_base.scss */
+/* line 163, src/sass/components/_base.scss */
 #secondary {
   padding: 2rem;
   background: #eee;
 }
 
-/* line 163, src/sass/components/_base.scss */
+/* line 168, src/sass/components/_base.scss */
 strong, b {
   font-weight: 700;
 }
 
 @media (min-width: 992px) {
-  /* line 168, src/sass/components/_base.scss */
+  /* line 173, src/sass/components/_base.scss */
   #content {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-  /* line 172, src/sass/components/_base.scss */
+  /* line 177, src/sass/components/_base.scss */
   #primary {
     -ms-flex-preferred-size: 66.666%;
         flex-basis: 66.666%;
     padding: 3rem 8rem;
   }
-  /* line 177, src/sass/components/_base.scss */
+  /* line 182, src/sass/components/_base.scss */
   #secondary {
     -ms-flex-preferred-size: 33.333%;
         flex-basis: 33.333%;
@@ -671,8 +677,8 @@ textarea {
     background: #ccfffc;
     background: url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-01@2x.png"), url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-02@2x.png"), url("https://2020.atlanta.wordcamp.org/files/2019/09/wcatl20-cloud-04@2x.png"), radial-gradient(circle at center, #ccfffc 50%, #62d6f0 125%);
     background-repeat: no-repeat;
-    background-size: auto 100%, auto 100%, auto 100%, auto;
-    background-position: 0% 140px, 100% 140px, 100% -140px, center center;
+    background-size: auto 100%, auto 100%, auto 100%, auto;
+    background-position: 0% 140px, 100% 140px, 100% -140px, center center;
     -webkit-animation: header 30s linear infinite;
             animation: header 30s linear infinite;
   }
